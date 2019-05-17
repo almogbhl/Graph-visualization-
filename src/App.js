@@ -1,22 +1,14 @@
 import React from "react";
-import styled from "styled-components";
-import GlobalStyle from './styles/global.styles';
-import PrintGraph from "./PrintGraph";
-import PrintGraphConnections from "./PrintGraphConnections";
+import Graph from "./components/Graph";
 
 function App() {
   return (
-    <Wrapper>
-      <GlobalStyle />
-
-      <PrintGraphConnections />
-    </Wrapper>
+    <div>
+      <Graph />
+    </div>
   );
 }
 
 export default App;
 
-const Wrapper = styled.div`
-   
-`;
 

@@ -6,7 +6,6 @@ class PrintGraph extends Component {
   state = {
     graph: null,
     options: null,
-    events: null,
     data: null
   };
 
@@ -171,10 +170,10 @@ class PrintGraph extends Component {
           <Graph
             graph={this.state.graph}
             options={this.state.options}
-            events={this.state.events}
             style={{
               height: "100vh",
-              verflow: "hidden",
+              width: "100vw",
+              overflow: "hidden",
               background: "linear-gradient(#000116, #002538)"
             }}
           />

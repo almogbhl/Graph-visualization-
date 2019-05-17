@@ -10,30 +10,100 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+      rel="stylesheet"
+    />
+    <title>Graph Visualization</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+      #root {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#000116, #002538);
+      }
+
+      .wrapper {
+        margin: auto;
+        width: 100px; /* Set the size of the progress bar */
+        height: 100px;
+
+        clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+      }
+      /* Set the sizes of the elements that make up the progress bar */
+      .circle {
+        width: 80px;
+        height: 80px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        position: absolute;
+        clip: rect(0px, 50px, 100px, 0px);
+      }
+      /* Using the data attributes for the animation selectors. */
+      /* Base settings for all animated elements */
+      div[data-anim~="base"] {
+        -webkit-animation-iteration-count: 1; /* Only run once */
+        -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
+        -webkit-animation-timing-function: linear; /* Linear animation */
+      }
+
+      .wrapper[data-anim~="wrapper"] {
+        -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
+        -webkit-animation-delay: 3s; /* Wait half of the animation */
+        -webkit-animation-name: close-wrapper; /* Keyframes name */
+      }
+
+      .circle[data-anim~="left"] {
+        -webkit-animation-duration: 6s; /* Full animation time */
+        -webkit-animation-name: left-spin;
+      }
+
+      .circle[data-anim~="right"] {
+        -webkit-animation-duration: 3s; /* Half animation time */
+        -webkit-animation-name: right-spin;
+      }
+      /* Rotate the right side of the progress bar from 0 to 180 degrees */
+      @-webkit-keyframes right-spin {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(180deg);
+        }
+      }
+      /* Rotate the left side of the progress bar from 0 to 360 degrees */
+      @-webkit-keyframes left-spin {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      /* Set the wrapper clip to auto, effectively removing the clip */
+      @-webkit-keyframes close-wrapper {
+        to {
+          clip: rect(auto, auto, auto, auto);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="root">
+      <div class="wrapper" data-anim="base wrapper">
+        <div class="circle" data-anim="base left"></div>
+        <div class="circle" data-anim="base right"></div>
+      </div>
+      
+    </div>
   </body>
 </html>
