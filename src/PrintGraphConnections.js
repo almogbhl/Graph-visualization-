@@ -165,7 +165,7 @@ class PrintGraph extends Component {
   };
 
   render() {
-    if (this.state.graph) {
+    if (this.state.graph !== null) {
       return (
         <div>
           <Graph
