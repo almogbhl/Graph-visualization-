@@ -1,11 +1,11 @@
 import React from "react";
-import Graph from "./components/Graph";
+import GraphTree from "./components/GraphTree/GraphTree";
 
 function App() {
   return (
-    <div>
-      <Graph />
-    </div>
+    <>
+      <GraphTree />
+    </>
   );
 }
 
