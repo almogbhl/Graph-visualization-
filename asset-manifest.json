@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Graph-visualization-/static/css/main.66998aad.chunk.css",
-    "main.js": "/Graph-visualization-/static/js/main.c944d92b.chunk.js",
-    "main.js.map": "/Graph-visualization-/static/js/main.c944d92b.chunk.js.map",
-    "runtime~main.js": "/Graph-visualization-/static/js/runtime~main.64f4a141.js",
-    "runtime~main.js.map": "/Graph-visualization-/static/js/runtime~main.64f4a141.js.map",
-    "static/js/2.1ceef35a.chunk.js": "/Graph-visualization-/static/js/2.1ceef35a.chunk.js",
-    "static/js/2.1ceef35a.chunk.js.map": "/Graph-visualization-/static/js/2.1ceef35a.chunk.js.map",
-    "index.html": "/Graph-visualization-/index.html",
-    "precache-manifest.34aada9b0c985a287bfe002eee933e39.js": "/Graph-visualization-/precache-manifest.34aada9b0c985a287bfe002eee933e39.js",
-    "service-worker.js": "/Graph-visualization-/service-worker.js",
-    "static/css/main.66998aad.chunk.css.map": "/Graph-visualization-/static/css/main.66998aad.chunk.css.map"
+    "main.css": "/data-visualization-app/static/css/main.d0a93848.chunk.css",
+    "main.js": "/data-visualization-app/static/js/main.5b59c3e6.chunk.js",
+    "main.js.map": "/data-visualization-app/static/js/main.5b59c3e6.chunk.js.map",
+    "runtime~main.js": "/data-visualization-app/static/js/runtime~main.9fc6af9a.js",
+    "runtime~main.js.map": "/data-visualization-app/static/js/runtime~main.9fc6af9a.js.map",
+    "static/js/2.1ceef35a.chunk.js": "/data-visualization-app/static/js/2.1ceef35a.chunk.js",
+    "static/js/2.1ceef35a.chunk.js.map": "/data-visualization-app/static/js/2.1ceef35a.chunk.js.map",
+    "index.html": "/data-visualization-app/index.html",
+    "precache-manifest.b1c789caf49f7fe3933565709efc6808.js": "/data-visualization-app/precache-manifest.b1c789caf49f7fe3933565709efc6808.js",
+    "service-worker.js": "/data-visualization-app/service-worker.js",
+    "static/css/main.d0a93848.chunk.css.map": "/data-visualization-app/static/css/main.d0a93848.chunk.css.map"
   }
 }
